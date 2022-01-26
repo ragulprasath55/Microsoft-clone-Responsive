@@ -74,6 +74,7 @@ ul {
 
 .main-nav ul {
   display: flex;
+  align-items: center;
   /* flex: 1; */
 }
 
@@ -83,14 +84,26 @@ ul {
   /* background: black; */
 }
 
-.main-nav .right-nav {
-  /* flex: 1; */
-  /* background: red; */
-  /* justify-content: center; */
+.main-nav .right-nav li a {
+  color: rgba(0, 0, 0, 0.699);
+}
+
+.main-nav a:hover {
+  border-bottom: 1px solid #000;
 }
 
 .main-nav ul li {
   padding-right: 15px;
+}
+
+.right-nav img {
+  width: 20px;
+  align-self: center;
+  margin: auto;
+}
+
+.right-nav p {
+  display: inline;
 }
 
 /* --------------Showcase section ---------- */
@@ -114,6 +127,27 @@ ul {
 
 .showcase .btn {
   margin-top: 20px;
+}
+
+/* ----------------General Section ----------*/
+.general {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 200px;
+  margin-right: 200px; */
+  margin: 20px 200px 20px 200px;
+}
+
+.general-item {
+  text-align: center;
+  width: 150px;
+}
+
+.general-item:hover {
+  transform: scale(1.1);
 }
 
 /* -------------------Home cards ---------------------- */
@@ -173,6 +207,35 @@ ul {
   padding: 100px 0 0 30px;
 }
 
+/* Covid */
+.covid {
+  text-align: center;
+  height: 150px;
+  margin: 20px 0 20px;
+  background-color: rgba(211, 211, 211, 0.589);
+}
+
+.covid h2 {
+  padding-top: 20px;
+  font-weight: 600;
+}
+.covid > * {
+  margin-bottom: 10px;
+}
+.covid a {
+  display: inline-block;
+  padding-bottom: 2px;
+}
+.covid a:hover {
+  /* padding-bottom: 5px; */
+  border-bottom: 1px solid #000;
+  /* line-height: 1.1; */
+  /* text-decoration: underline; */
+}
+
+.covid a:hover i {
+  transform: translateX(2px);
+}
 /* Follow */
 .follow p {
   font-size: 15px;
@@ -240,6 +303,12 @@ footer {
 
 .inner-footer div i {
   margin-right: 5px;
+}
+
+@media (max-width: 750px) {
+  .right-nav p {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -314,6 +383,19 @@ footer {
   ul.right-nav {
     margin-right: 60px;
   }
+
+  .general {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .general-item {
+    margin-bottom: 10px;
+  }
+
+  .general-item:hover {
+    transform: scale(0.9);
+  }
 }
 
 @media (max-width: 500px) {
@@ -335,5 +417,19 @@ footer {
 
   .inner-footer div {
     margin-bottom: 20px;
+  }
+
+  .main-nav {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  ul.right-nav {
+    order: 1;
+  }
+
+  .main-nav .logo {
+    display: block;
+    order: 2;
+    margin-left: 2px;
   }
 }
